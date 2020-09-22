@@ -9,6 +9,7 @@ public class Employer {
 
     public Employer() {
         id = nextId;
+        id = nextId;
         nextId++;
     }
 

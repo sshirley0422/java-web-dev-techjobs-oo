@@ -24,17 +24,16 @@ public class CoreCompetency {
         return value;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof CoreCompetency)) return false;
-        CoreCompetency that = (CoreCompetency) o;
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        CoreCompetency that = (CoreCompetency) object;
         return id == that.id;
     }
 
-    @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return java.util.Objects.hash(super.hashCode(), id);
     }
 
     // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but

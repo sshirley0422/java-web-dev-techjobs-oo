@@ -95,4 +95,40 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    public String toString() {
+        String notFound = "Data not available";
+        String outputString = "\n" + "ID: " + this.getId() + "\nName: ";
+        if (this.getName() != ""){
+            outputString += this.getName();
+        }else{
+            outputString += notFound;
+        }
+        outputString += "\nEmployer: ";
+        if (this.getEmployer().getValue() != ""){
+            outputString += this.getEmployer().getValue();
+        }else{
+            outputString += notFound;
+        }
+        outputString += "\nLocation: ";
+        if (this.getLocation().getValue() != ""){
+            outputString += this.getLocation().getValue();
+        }else{
+            outputString += notFound;
+        }
+        outputString += "\nPosition Type: ";
+        if (this.getPositionType().getValue() != ""){
+            outputString += this.getPositionType().getValue();
+        }else{
+            outputString += notFound;
+        }
+        outputString += "\nCore Competency: ";
+        if (this.getCoreCompetency().getValue() != ""){
+            outputString += this.getCoreCompetency().getValue();
+        }else{
+            outputString += notFound;
+        }
+        outputString += "\n";
+        return outputString;
+
+    }
 }
